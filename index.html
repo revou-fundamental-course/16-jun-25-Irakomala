@@ -11,13 +11,97 @@
 
 <body>
     <!-- Head Content -->
-     <header></header>
+     <header>
+        <h1>Welcome to My Katik</h1>
+
+        <p>Sampurasun yeorobun, Wilujeng sumping di Katik :) Matematika ilmu yang menyenangkan!😄 <br>
+            Belajar matematika jadi mudah! Hitung luas dan keliling bangun datar dengan website sederhana ini</p>
+
+        <!-- Navigation -->
+        <nav>
+            <a class="bg-lightblue" href="">Segitiga</a>
+            <a class="bg-lightpink" href="">Jajar Genjang</a>
+
+     </header>
 
      <!-- Main Content -->
-      <main></main>
+      <main>
+        <!-- Luas -->
+         <section>
+            <header>
+                <h2>Luas Segitiga</h2>
+            </header>
+
+            <!-- Konten Luas -->
+            <div class="formula-img img-luas"></div>
+
+            <p>Rumus Luas Segitiga1 1/2 * alas * tinggi</p>
+
+            <!-- Form Luas -->
+            <form>
+                <header>
+                    <h2>Form Luas Segitiga</h2>
+                </header>
+
+                <div>
+                    <label for="alas">Alas:</label>
+                    <input type="number" id="alas" name="alas" placeholder="Masukkan Alas Segitiga" required>
+                </div>
+
+                <div>
+                    <label for="tinggi">Tinggi:</label>
+                    <input type="number" id="tinggi" name="tinggi" placeholder="Masukkan Tinggi Segitiga" required>
+                </div>
+
+                <div>
+                    <button>Hitung</button>
+                </div>
+            </form>
+         </section>
+
+         <!-- Keliling -->
+          <section>
+            <header>
+                <h2>Keliling Segitiga</h2>
+            </header>
+
+            <!-- Konten Keliling -->
+            <div class="formula-img img-keliling"></div>
+
+            <p>Rumus Keliling Segitiga: 3 * s</p>
+
+            <!-- Form Keliling -->
+            <form>
+                <header>
+                    <h2>Form Keliling Segitiga</h2>
+                </header>
+
+                <div>
+                    <label for="sisi">Sisi A:</label>
+                    <input type="number" id="sisi-a" name="sisi" placeholder="Masukkan Sisi A" required>
+                </div>
+
+                <div>
+                    <label for="sisi">Sisi B:</label>
+                    <input type="number" id="sisi-b" name="sisi" placeholder="Masukkan Sisi B" required>
+                </div>
+
+                <div>
+                    <label for="sisi">Sisi C:</label>
+                    <input type="number" id="sisi-c" name="sisi" placeholder="Masukkan Sisi C" required>
+                </div>
+
+                <div>
+                    <button>Hitung</button>
+                </div>
+            </form>
+          </section>
+      </main>
 
       <!-- Footer Content -->
-       <footer></footer>
+       <footer>
+           <p>&copy; 2025 Ira. All right reserved.</p>
+       </footer>
 </body>
 
 </html>
