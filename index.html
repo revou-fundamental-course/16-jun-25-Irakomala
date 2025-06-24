@@ -3,105 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Matematik - Ira</title>
+    <title>Kalkulator Bangun Datar - Ira</title>
 
-    <!-- CSS External -->
-    <link rel="stylesheet" href="css\style.css">
 </head>
-
 <body>
+
     <!-- Head Content -->
-     <header>
-        <h1>Welcome to My Katik</h1>
+    <header class="hero">
+        <h1>Selamat datang di Katik Ira~ 🐣✨</h1>
+        <p>Annyeong, yaedeura🧒👧 Wilujeng sumping di Katik Ira :) Matematika ilmu yang menyenangkan!😄 <br>
+        Belajar matematika jadi seru dan gak membosanka! Hitung luas dan keliling bangun datar dengan website sederhana ini 🔢🧮 <br>
+        Selamat belajar, chingudeul~</p>
+    </header>
 
-        <p>Sampurasun yeorobun, Wilujeng sumping di Katik :) Matematika ilmu yang menyenangkan!😄 <br>
-            Belajar matematika jadi mudah! Hitung luas dan keliling bangun datar dengan website sederhana ini</p>
+    <!-- Navigation -->
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#segitiga">Segitiga</a></li>
+            <li><a href="#persegi">Persegi</a></li>
+            <li><a href="#persegiPanjang">persegi Panjang</a></li>
+            <li><a href="#lingkaran">Lingkaran</a></li>
+            <li><a href="#trapesium">Trapesium</a></li>
+            <li><a href="#jajarGenjang">Jajar Genjang</a></li>
+            <li><a href="#belahKetupat">Belah Ketupat</a></li>
+            <li><a href="#layangLayang">Layang-Layang</a></li>
+        </ul>
+    </nav>
 
-        <!-- Navigation -->
-        <nav>
-            <a class="bg-lightblue" href="">Segitiga</a>
-            <a class="bg-lightpink" href="">Jajar Genjang</a>
+    <!-- Main Content -->
+    <main>
 
-     </header>
+        <!-- segitiga -->
+        <section id="segitiga" class="card card-segitiga">
+            <h2>△ Segitiga</h2>
+            <img src="https://www.advernesia.com/wp-content/uploads/2018/10/Segitiga.png" alt="Ilustrasi Segitiga">
+            <p>
+              Rumus : <br>
+              Luas = 1/2 * a * t <br> 
+              Keliling = a + b + c <br>
+            </p>
+            <button onclick="toggleForm('segitiga')">Hitung Segitiga</button>
+            <div id="form-segitiga" class="form" style="display: none;">
+                <form onsubmit="hitungSegitiga(event)">
+                    <h3>Hitung Luas</h3>
+                    <label for="alasSegitiga">Alas:</label>
+                    <input type="number" id="alasSegitiga" placeholder="Masukkan alas" required>
+                    <label for="tinggiSegitiga">Tinggi:</label>
+                    <input type="number" id="tinggiSegitiga" placeholder="Masukkan tinggi" required> 
+                    <h3>Hitung Keliling</h3>
+                    <label for="sisiA">Sisi A:</label>
+                    <input type="number" id="sisiA" placeholder="Masukkan sisi A" required>
+                    <label for="sisiB">Sisi B:</label>
+                    <input type="number" id="sisiB" placeholder="Masukkan sisi B" required> 
+                    <label for="sisiC">Sisi A:</label>
+                    <input type="number" id="sisiC" placeholder="Masukkan sisi C" required> 
+                </form>
+                <div id="hasil-segitiga" class="hasil"></div>
+            </div>
+        </section>
 
-     <!-- Main Content -->
-      <main>
-        <!-- Luas -->
-         <section>
-            <header>
-                <h2>Luas Segitiga</h2>
-            </header>
+        <!-- Persegi -->
+        <section id="persegi" class="card card-persegi">
+            <h2>▫️Persegi</h2>
+            <img src="https://www.advernesia.com/wp-content/uploads/2018/10/Persegi.png" alt="Ilustrasi Persegi">
+            <p>
+              Rumus: <br>
+              Luas = s * s <br>
+              Keliling = 4 * s
+            </p>
+            <button onclick="toggleForm('persegi')">Hitung Persegi</button>
+            <div id="form-persegi" class="form" style="display: none;">
+                <form onsubmit="hitungPersegi(event)">
+                    <label for="sisi">Sisi:</label>
+                    <input type="number" id="sisi" name="sisi" placeholder="Masukkan sisi" required>
+                    <button type="">Hitung</button>
+                </form>
+                <div id="hasil-persegi" class="hasil"></div>
+            </div>
+        </section>
 
-            <!-- Konten Luas -->
-            <div class="formula-img img-luas"></div>
+        <!-- Persegi Panjang -->
+        <section id="persegiPanjang" class="card card-persegi-panjang">
+            <h2>▭ Persegi Panjang</h2>
+            <img src="https://www.advernesia.com/wp-content/uploads/2018/10/Pengertian-persegi-panjang.png" alt="Ilustrasi Persegi Panjang">
+            <p>
+              Rumus <br>
+              Luas = p * l<br>
+              Keliling = 2 * (p + l)
+            </p>
+            <button onclick="toggleForm('persegiPanjang')">Hitung Sekarang</button>
+            <div id="form-persegiPanjang" class="form" style="display: none;">
+                <form onsubmit="hitungPersegipanjang(event)">
+                    <label for="panjang">Panjang:</label>
+                    <input type="number" id="panjang" name="panjang" placeholder="Masukkan panjang" required>
+                    <label for="lebar">Lebar:</label>
+                    <input type="number" id="lebar" name="lebar" placeholder="Masukkan lebar" required>
+                    <button type="submit">Hitung</button>
+                </form>
+                <div id="hasil-persegiPanjang" class="hasil"></div>
+            </div>
+        </section>
 
-            <p>Rumus Luas Segitiga1 1/2 * alas * tinggi</p>
+        <!-- lingkaran  -->
+        <section id="lingkaran" class="card card-lingkaran">
+            <h2>⚪ Lingkaran</h2>
+            <img src="https://www.advernesia.com/wp-content/uploads/2018/10/Lingkaran.png" alt="Ilustrasi Lingkaran Jari-jari">
+            <img src="https://www.advernesia.com/wp-content/uploads/2018/10/Lingkaran.png" alt="Ilustrasi Lingkaran Diagonal">
+            <p>
+              Rumus: <br>
+              Luas = π * r² <br>
+              Keliling = 2 * π * r
+            </p>
+            <button onclick="toggleForm('lingkaran')">Hitung Sekarang</button>
+            <div id="form-lingkaran" class="form" style="display: none;">
+                <form onsubmit="hitungLingkaran(event)">
+                    <label for="jariJari">Jari-jari (r):</label>
+                    <input type="number" id="jariJari" placeholder="Masukkan jari-jari" required>
+                    <button type="submit">Hitung</button>
+                </form>  
+                <div id="hasil-lingkaran" class="hasil"></div>
+            </div>
+        </section>
 
-            <!-- Form Luas -->
-            <form>
-                <header>
-                    <h2>Form Luas Segitiga</h2>
-                </header>
+        <!-- Trapesium -->
+        <section id="trapesium" class="card card-trapesium">
+            <h2>🔷 Trapesium</h2>
+            <img src="https://www.advernesia.com/wp-content/uploads/2018/10/Rumus-Luas-Trapesium.png" alt="Ilustrasi Trapesium">
+            <p>
+              Rumus: <br>
+              Luas = ½ * (a + b) * t <br>
+             Keliling = a + b + c + d
+            </p>
+            <button onclick="toggleForm('trapesium')">Hitung Sekarang</button>
+            <div id="form-trapesium" class="form" style="display: none;">
+                <form onsubmit="hitungTrapesium(event)">
+                    <label for="alasA">Sisi atas (a):</label>
+                    <input type="number" id="alasA" required>
+                    <label for="alasB">Sisi bawah (b):</label>
+                    <input type="number" id="alasB" required>
+                    <label for="tinggiTrapesium">Tinggi (t):</label>
+                    <input type="number" id="tinggiTrapesium" required>
+                    <label for="sisiC">Sisi miring kiri (c):</label>
+                    <input type="number" id="sisiC" required>
+                    <label for="sisiD">Sisi miring kanan (d):</label>
+                    <input type="number" id="sisiD" required>
+                    <button type="submit">Hitung</button>
+                </form>
+                <div id="hasil-trapesium" class="hasil"></div>
+            </div>
+        </section>
 
-                <div>
-                    <label for="alas">Alas:</label>
-                    <input type="number" id="alas" name="alas" placeholder="Masukkan Alas Segitiga" required>
-                </div>
+        <!-- Jajar Genjang -->
+        <section id="jajarGenjang" class="card card-jajar-genjang">
+            <h2>▰ Jajar Genjang</h2>
+            <img src="https://www.advernesia.com/wp-content/uploads/2018/10/Rumus-Jajar-Genjang.png" alt="Ilustrasi Jajar Genjang">
+            <p>
+              Rumus: <br>
+              Luas = a * t <br>
+              Keliling = 2 * (a + b)
+            </p>
+            <button onclick="toggleForm('jajarGenjang')">Hitung Sekarang</button>
+            <div id="form-jajarGenjang" class="form" style="display: none;">
+                <form onsubmit="hitungJajarGenjang(event)">
+                     <label for="alasJG">Alas (a):</label>
+                     <input type="number" id="alasJG" required>
+                     <label for="tinggiJG">Tinggi (t):</label>
+                     <input type="number" id="tinggiJG" required>
+                     <label for="sisiMiringJG">Sisi miring (b):</label>
+                     <input type="number" id="sisiMiringJG" required>
+                     <button type="submit">Hitung</button>
+                </form>
+                <div id="hasil-jajarGenjang" class="hasil"></div>
+            </div>
+        </section>
 
-                <div>
-                    <label for="tinggi">Tinggi:</label>
-                    <input type="number" id="tinggi" name="tinggi" placeholder="Masukkan Tinggi Segitiga" required>
-                </div>
+        <!-- Belah Ketupat -->
+        <section id="belahKetupat" class="card card-belah-ketupat">
+            <h2>🔶 Belah Ketupat</h2>
+            <img src="https://www.advernesia.com/wp-content/uploads/2018/10/Belah-ketupat.png" alt="Ilustrasi Belah Ketupat">
+            <p>
+              Rumus: <br>
+              Luas = ½ * d₁ * d₂ <br>
+              Keliling = 4 * Sisi
+            </p>
+            <button onclick="toggleForm('belahKetupat')">Hitung Sekarang</button>
+            <div id="form-belahKetupat" class="form" style="display: none;" >
+                <form onsubmit="hitungBelahKetupat(event)">
+                    <label for="diagonal1BK">Diagonal 1 (d₁):</label>
+                    <input type="number" id="diagonal1BK" required>
+                    <label for="diagonal2BK">Diagonal 2 (d₂):</label>
+                    <input type="number" id="diagonal2BK" required>
+                    <label for="sisiBK">Sisi:</label>
+                    <input type="number" id="sisiBK" required>
+                    <button type="submit">Hitung</button>
+                </form>
+                <div id="hasil-belahKetupat" class="hasil"></div>
+            </div>
+        </section>
 
-                <div>
-                    <button>Hitung</button>
-                </div>
-            </form>
-         </section>
+        <!-- Layang-Layang -->
+        <section id="layangLayang" class="card card-layang-layang">
+            <h2>🔸 Layang-Layang</h2>
+            <img src="https://www.advernesia.com/wp-content/uploads/2018/10/Rumus-Layang-layang.png" alt="Ilustrasi Layang-Layang">
+            <p>
+              Rumus: <br>
+              Luas = ½ * d₁ * d₂ <br>
+              Keliling = 2 * (a + b)
+            </p>
+            <button onclick="toggleForm('layangLayang')">Hitung Sekarang</button>
+            <div id="form-layangLayang" class="form" style="display: none;">
+                <form onsubmit="hitungLayangLayang(event)">
+                    <label for="diagonal1LL">Diagonal 1 (d₁):</label>
+                    <input type="number" id="diagonal1LL" required>
+                    <label for="diagonal2LL">Diagonal 2 (d₂):</label>
+                    <input type="number" id="diagonal2LL" required>
+                    <label for="sisiA_LL">Sisi pendek (a):</label>
+                    <input type="number" id="sisiA_LL" required>
+                    <label for="sisiB_LL">Sisi panjang (b):</label><input type="number" id="sisiB_LL" required>
+                    <button type="submit">Hitung</button>
+                </form>
+                <div id="hasil-layangLayang" class="hasil"></div>
+            </div>   
+        </section>
+    </main>
 
-         <!-- Keliling -->
-          <section>
-            <header>
-                <h2>Keliling Segitiga</h2>
-            </header>
+    <footer>
+        <p>&copy; 2025 Ira. All right reserved.</p>
+    </footer>
 
-            <!-- Konten Keliling -->
-            <div class="formula-img img-keliling"></div>
-
-            <p>Rumus Keliling Segitiga: 3 * s</p>
-
-            <!-- Form Keliling -->
-            <form>
-                <header>
-                    <h2>Form Keliling Segitiga</h2>
-                </header>
-
-                <div>
-                    <label for="sisi">Sisi A:</label>
-                    <input type="number" id="sisi-a" name="sisi" placeholder="Masukkan Sisi A" required>
-                </div>
-
-                <div>
-                    <label for="sisi">Sisi B:</label>
-                    <input type="number" id="sisi-b" name="sisi" placeholder="Masukkan Sisi B" required>
-                </div>
-
-                <div>
-                    <label for="sisi">Sisi C:</label>
-                    <input type="number" id="sisi-c" name="sisi" placeholder="Masukkan Sisi C" required>
-                </div>
-
-                <div>
-                    <button>Hitung</button>
-                </div>
-            </form>
-          </section>
-      </main>
-
-      <!-- Footer Content -->
-       <footer>
-           <p>&copy; 2025 Ira. All right reserved.</p>
-       </footer>
+    
 </body>
-
 </html>
