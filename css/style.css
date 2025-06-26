@@ -91,6 +91,38 @@ main {
   line-height: 1.6;
 }
 
+.card-segitiga {
+        background-color: lightblue;
+}
+
+.card-persegi {
+        background-color: lightseagreen;
+}
+
+.card-persegi-panjang {
+        background-color: lightcyan;
+}
+
+.card-lingkaran {
+        background-color: lightgreen;
+}
+
+.card-trapesium {
+        background-color: lightpink;
+}
+
+.card-jajar-genjang {
+        background-color: lightyellow;
+}
+
+.card-belah-ketupat {
+        background-color: plum;
+}
+
+.card-layang-layang {
+        background-color: lightsalmon;
+}
+
 /* Gambar Ilustrasi */
 .shape-img {
   display: block;
