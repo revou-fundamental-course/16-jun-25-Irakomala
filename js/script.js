@@ -4,6 +4,7 @@ function toggleForm(id) {
   formElement.style.display = formElement.style.display === "none" ? "block" : "none";
 }
 
+// Fungsi Hitung Luas dan Keliling Bangun Datar
 // Segitiga
 function hitungSegitiga(event) {
   event.preventDefault();
@@ -127,4 +128,13 @@ function hitungLayangLayang(event) {
     Luas: ${luas}<br>
     Keliling: ${keliling}
   `;
+}
+
+// Fungsi Reset Form Bangun datar
+function resetForm(bangun) {
+  const form = document.querySelector(`#form-${bangun} form`);
+  if (form) {
+    form.reset();
+    document.getElementById(`hasil-${bangun}`).innerHTML = "";
+  }
 }

@@ -63,7 +63,8 @@
                     <input type="number" id="sisiB" placeholder="Masukkan sisi B" required> 
                     <label for="sisiC">Sisi A:</label>
                     <input type="number" id="sisiC" placeholder="Masukkan sisi C" required> 
-                    <button type="">Hitung</button>
+                    <button type="submit">Hitung</button>
+                    <button type="button" onclick="resetForm('segitiga')">Reset</button>
                 </form>
                 <div id="hasil-segitiga" class="hasil"></div>
             </div>
@@ -83,7 +84,8 @@
                 <form onsubmit="hitungPersegi(event)">
                     <label for="sisi">Sisi:</label>
                     <input type="number" id="sisi" name="sisi" placeholder="Masukkan sisi" required>
-                    <button type="">Hitung</button>
+                    <button type="submit">Hitung</button>
+                    <button type="button" onclick="resetForm('persegi')">Reset</button>
                 </form>
                 <div id="hasil-persegi" class="hasil"></div>
             </div>
@@ -106,6 +108,7 @@
                     <label for="lebar">Lebar:</label>
                     <input type="number" id="lebar" name="lebar" placeholder="Masukkan lebar" required>
                     <button type="submit">Hitung</button>
+                    <button type="button" onclick="resetForm('persegiPanjang')">Reset</button>
                 </form>
                 <div id="hasil-persegiPanjang" class="hasil"></div>
             </div>
@@ -126,6 +129,7 @@
                     <label for="jariJari">Jari-jari (r):</label>
                     <input type="number" id="jariJari" placeholder="Masukkan jari-jari" required>
                     <button type="submit">Hitung</button>
+                    <button type="button" onclick="resetForm('lingkaran')">Reset</button>
                 </form>  
                 <div id="hasil-lingkaran" class="hasil"></div>
             </div>
@@ -154,6 +158,7 @@
                     <label for="sisiD">Sisi miring kanan (d):</label>
                     <input type="number" id="sisiD" required>
                     <button type="submit">Hitung</button>
+                    <button type="button" onclick="resetForm('trapesium')">Reset</button>
                 </form>
                 <div id="hasil-trapesium" class="hasil"></div>
             </div>
@@ -178,6 +183,7 @@
                      <label for="sisiMiringJG">Sisi miring (b):</label>
                      <input type="number" id="sisiMiringJG" required>
                      <button type="submit">Hitung</button>
+                     <button type="button" onclick="resetForm('jajarGenjang')">Reset</button>
                 </form>
                 <div id="hasil-jajarGenjang" class="hasil"></div>
             </div>
@@ -202,6 +208,7 @@
                     <label for="sisiBK">Sisi:</label>
                     <input type="number" id="sisiBK" required>
                     <button type="submit">Hitung</button>
+                    <button type="button" onclick="resetForm('belahKetupat')">Reset</button>
                 </form>
                 <div id="hasil-belahKetupat" class="hasil"></div>
             </div>
@@ -227,6 +234,7 @@
                     <input type="number" id="sisiA_LL" required>
                     <label for="sisiB_LL">Sisi panjang (b):</label><input type="number" id="sisiB_LL" required>
                     <button type="submit">Hitung</button>
+                    <button type="button" onclick="resetForm('layangLayang')">Reset</button>
                 </form>
                 <div id="hasil-layangLayang" class="hasil"></div>
             </div>   
