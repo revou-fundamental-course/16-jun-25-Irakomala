@@ -1,71 +1,165 @@
-header {
-        text-align: center;
+/* Font */
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #fceabb, #f8b500);
+  color: #333;
 }
 
-nav {
-        display: flex;
-        flex-direction: column;
+/* Header, Hero Section */
+.hero {
+  text-align: center;
+  background-color: #fff8e1;
+  padding: 30px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-nav a{
-        border-radius: 8px;
-        height: 50px;
-        align-content: center;
-        color: black;
-        text-decoration: none;
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
-.bg-lightblue {
-        background-color: lightblue;
+.hero p {
+  font-size: 1.1em;
+  line-height: 1.6;
 }
 
-.bg-lightpink {
-        background-color: lightpink;
+/* Sidebar Navigation */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #fff3e0;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #ffd54f;
+}
+
+/* Main Content */
 main {
-        display: flex;
-        gap: 32px;
+  margin-left: 220px;
+  padding: 20px;
 }
 
-main > section {
-        flex: 1;
-        text-align: center;
+/* Card Layout */
+.card {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
 }
 
-.formula-img {
-        height: 200px;
-        background-position: center;
-        background-size: cover;
+.card:hover {
+  transform: scale(1.01);
 }
 
-.img-luas {
-        background-image: url(https://fti.ars.ac.id/img-blog/cara-mengitung-luas-segitiga-dengan-bahasa-pemograman-c);
-        
+.card h2 {
+  margin-top: 0;
+  font-size: 1.8em;
 }
 
-.img-keliling {
-        background-image: url(data:image/jpeg;base64,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);       
+.card p {
+  line-height: 1.6;
 }
 
-/* Form CSS Style */
-input[type=number] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
+/* Gambar Ilustrasi */
+.shape-img {
+  display: block;
+  margin: 10px auto 20px;
+  max-width: 200px;
+  height: auto;
 }
 
-footer {
-        text-align: center;
-}
-
+/* Tombol Umum */
 button {
-        background-color: dodgerblue;
-        border: none;
-        padding: 8px;
-        border-radius: 8px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition:  0.3s;
 }
+
+button:hover {
+  background-color: #f57c00;
+}
+
+/* Formulir */
+.form {
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+form h3 {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+/* Hasil */
+.hasil {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e3f2fd;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #1e88e5;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #fff8e1;
+  border-top: 1px solid #eee;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #666;
+}
+
